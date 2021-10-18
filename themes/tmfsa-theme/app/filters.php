@@ -120,3 +120,23 @@ function wfm_acf_json_load_point( $paths ) {
     
 }
 
+/**
+ * Hide Taxonomy Meta Boxes from the WordPress Editor Sidebar in Gutenberg
+ * https://github.com/WordPress/gutenberg/issues/13816#issuecomment-470137667
+ */
+add_filter( 'rest_prepare_taxonomy', __NAMESPACE__.'\\remove_taxonomy_from_editor_sidebar', 10, 3 );
+
+function remove_taxonomy_from_editor_sidebar( $response, $taxonomy, $request ){
+
+	$context = ! empty( $request['context'] ) ? $request['context'] : 'view';
+
+	// Context is edit in the editor
+	if( $context === 'edit' && $taxonomy->meta_box_cb === false ){
+		$data_response = $response->get_data();
+		$data_response['visibility']['show_ui'] = false;
+		$response->set_data( $data_response );
+	}
+
+	return $response;
+}
+
