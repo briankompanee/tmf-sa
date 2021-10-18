@@ -89,3 +89,34 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+
+/**
+ * Local JSON for ACF - json save location
+ * https://www.advancedcustomfields.com/resources/local-json/
+ */
+add_filter('acf/settings/save_json', __NAMESPACE__.'\\wfm_acf_json_save_point');
+ 
+function wfm_acf_json_save_point( $path ) {
+    
+    $path = get_stylesheet_directory() . '/acf-json-sync';
+    return $path;
+    
+}
+
+/**
+ * Local JSON for ACF - json load location
+ * https://www.advancedcustomfields.com/resources/local-json/
+ */
+add_filter('acf/settings/load_json', __NAMESPACE__.'\\wfm_acf_json_load_point');
+
+function wfm_acf_json_load_point( $paths ) {
+    
+    // remove original path (optional)
+    unset($paths[0]);
+    
+    $paths[] = get_stylesheet_directory() . '/acf-json-sync';
+    return $paths;
+    
+}
+
