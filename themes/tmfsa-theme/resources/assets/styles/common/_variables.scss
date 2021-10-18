@@ -1,8 +1,14 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+//Colors
+$purple: #981e97;
+$pink:   #e31c79;
+$white:  #fff;
+$black:  #000;
+
 $theme-colors: (
-  primary: #525ddc
+  primary: $purple
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */

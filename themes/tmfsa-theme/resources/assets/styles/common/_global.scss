@@ -1,0 +1,53 @@
+html {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: $black;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+a:hover {
+  color: $pink;
+  border-bottom: 2px solid;
+  text-decoration: none;
+}
+
+//GLOBAL: Banner, Logo
+.banner {
+  @extend .d-print-none;
+
+  .navbar {
+    min-height: 77px;
+  }
+
+  .inner-banner {
+    height: 55px;
+  }
+
+  a.navbar-brand {
+    margin-right: 15px;
+
+    &:hover {
+      border: none;
+    }
+
+    .logo {
+      width: 144px;
+      fill: $white;
+    }
+  }
+
+  .tagline {
+    color: $white;
+    display: inline-block;
+    margin: 0 20px;
+  }
+}
