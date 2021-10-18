@@ -1,0 +1,50 @@
+//FOOTER
+.footer {
+  width: 100%;
+  background-color: $purple;
+  color: $white;
+  text-align: center;
+
+  .container .row {
+    height: 60px;
+  }
+
+  .footer-content {
+    .copyright {
+      display: inline-block;
+    }
+
+    .footer-site-link {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .footer-site-link-text {
+      margin: 0 10px;
+
+      a {
+        color: $white;
+      }
+    }
+
+    .nav-footer {
+      @extend .d-print-none;
+
+      .footer-navigation {
+        display: inline-block;
+        list-style: none;
+        margin: auto;
+        padding: 0;
+
+        .menu-item {
+          display: inline-block;
+
+          a {
+            color: $white;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
