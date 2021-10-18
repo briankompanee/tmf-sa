@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5e169eb87481574641b2c3fb63e1a9c",
+    "content-hash": "88ae2946ed39624c9531f21ead52dfa7",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -726,6 +726,53 @@
                 }
             ],
             "time": "2020-04-07T20:44:10+00:00"
+        },
+        {
+            "name": "mwdelaney/sage-bootstrap4-navwalker",
+            "version": "1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MWDelaney/sage-bootstrap4-navwalker.git",
+                "reference": "3a198858899980276bcba3dbf9bbdaf2c5d6837f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MWDelaney/sage-bootstrap4-navwalker/zipball/3a198858899980276bcba3dbf9bbdaf2c5d6837f",
+                "reference": "3a198858899980276bcba3dbf9bbdaf2c5d6837f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap4-navwalker.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael W. Delaney",
+                    "email": "michael@michaeldelaney.me"
+                }
+            ],
+            "description": "Bootstrap 4 Navbar component navwalker for Sage 9 based themes",
+            "homepage": "https://github.com/MWDelaney/sage-bootstrap4-navwalker",
+            "keywords": [
+                "bootstrap 4",
+                "navbar",
+                "navwalker",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/MWDelaney/sage-bootstrap4-navwalker/issues",
+                "source": "https://github.com/MWDelaney/sage-bootstrap4-navwalker/tree/1.7"
+            },
+            "time": "2020-10-14T12:56:05+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2252,5 +2299,5 @@
         "php": ">=7.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
