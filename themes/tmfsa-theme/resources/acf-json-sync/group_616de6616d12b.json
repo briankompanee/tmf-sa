@@ -1,0 +1,78 @@
+{
+    "key": "group_616de6616d12b",
+    "title": "Related Meta",
+    "fields": [
+        {
+            "key": "field_616de694d3469",
+            "label": "Company Name",
+            "name": "related_company_name",
+            "type": "post_object",
+            "instructions": "<sm>Please select the company related to this article. If you do not find the company you are looking for, you will need to first create a new Company by clicking on \"Companies\" > \"Add new\" in the Admin menu.<\/sm>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "company"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_616df32c20e37",
+            "label": "Ticker Symbol",
+            "name": "related_ticker_symbol",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "ticker_symbol",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "news"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "stock-recommendation"
+            }
+        ]
+    ],
+    "menu_order": -1,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "categories",
+        "tags"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1634595702
+}
