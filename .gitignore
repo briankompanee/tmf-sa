@@ -1,4 +1,10 @@
 .env
 **/.DS_Store
-wp-data
-wp-app
+wp-data/*
+wp-app/*
+!wp-app/wp-content
+wp-app/wp-content/uploads/*
+wp-app/wp-content/themes/*
+!wp-app/wp-content/themes/tmfsa-theme
+wp-app/wp-content/plugins/*
+!wp-app/wp-content/plugins/tmfsa-post-types
