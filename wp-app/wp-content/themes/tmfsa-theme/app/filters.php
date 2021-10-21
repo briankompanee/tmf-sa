@@ -140,3 +140,15 @@ function remove_taxonomy_from_editor_sidebar( $response, $taxonomy, $request ){
 	return $response;
 }
 
+/**
+ * Disable canonical redirect for custom post type to get pagination work
+ * https://core.trac.wordpress.org/ticket/15551
+ */
+add_filter( 'redirect_canonical', __NAMESPACE__.'\\custom_disable_redirect_canonical' );
+
+function custom_disable_redirect_canonical( $redirect_url ){
+
+    if ( is_singular('company') ) $redirect_url = false;
+
+    return $redirect_url;
+}
