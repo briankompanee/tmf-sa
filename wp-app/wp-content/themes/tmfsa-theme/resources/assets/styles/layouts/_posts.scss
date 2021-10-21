@@ -1,0 +1,12 @@
+.page-number-pagination {
+  padding: 1rem 0;
+
+  .page-numbers {
+    @extend .btn;
+    @extend .btn-primary;
+
+    &.current {
+      @extend .btn-light;
+    }
+  }
+}
