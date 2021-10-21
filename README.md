@@ -1,3 +1,20 @@
+# TMF-SA Project
+HELLO!!!
+
+I have included a complete Docker container setup.  To run the setup follow the directions for the WPDC - WordPress Docker Compose section below this one.  The second piece of the project is the theme and one custom plugin.  On the theme page follow the READ.me file to use the custom template built for this project utilizing Roots/Sage. 
+
+A few notes to get started if cloning the repo and setting up your own local Docker container:
+- Pay close attention to the WPDC instructions below and make sure that you create a `.env` file for your MySQL DB connections as decsribed below. 
+- You will need to add/define the API_KEY in wp-config.php to utilize the https://financialmodelingprep.com/ API connection.
+  - eg. `define( 'API_KEY', 'your_api_key_number' );`
+- The theme setup instructions are in the theme READ.me file. A couple of notes for that:
+  - The theme compiles all assets to a `/dist/` folder that is not tracked in git. With that being said on a fresh install you will need to go to the theme directory and make sure you have all the dependancies installed that are listed in the theme READ.me file.
+  - Once you have all the theme dependencies installed you will need to run `composer install` and `composer update` inside the theme directory. 
+  - Lastly you will then need to make sure that you run `yarn && yarn start` for active development to utilize webpack, compresson, compilers and the linters. 
+  - When ready for a production deployment you can run the compiler buy running `yarn build:production`.
+  - If you have any other questions please contact me! :)
+
+
 # WPDC - WordPress Docker Compose
 
 Easy WordPress development with Docker and Docker Compose.
